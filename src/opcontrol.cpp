@@ -1,0 +1,120 @@
+#include "claw.hpp"
+#include "dr4b.hpp"
+#include "intake.hpp"
+#include "main.h"
+#include "ports.hpp"
+#include "pros/misc.h"
+#include "pros/rtos.hpp"
+#include "tasks.hpp"
+#include <algorithm>
+#include <cmath>
+#include <cstdint>
+
+class OpControl {
+private:
+  inline static size_t level_ = 1;
+  inline static float init_height_ = init_heights::ALLIANCE;
+private:
+  static void lift_incr() {
+    const auto prev_target = lift.get_target();
+
+    
+
+    lift.set_target(get_height_at_level(level_ += level_ == 1 ? 2 : 1, init_height_));
+
+    if (lift.get_target() == prev_target) {
+      level_--;
+    }
+
+    if (level_ > 1) {
+      claw.set_target_angle(claw_angle::GOONER);
+    }
+  }
+
+  static void lift_decr() {
+    if (level_ == 1) {
+      return;
+    }
+
+    lift.set_target(get_height_at_level(--level_, init_height_));
+
+    if (level_ == 1) {
+      claw.set_target_angle(claw_angle::LOADING);
+    }
+  }
+
+  static void score(pros::controller_digital_e_t cancel_btn) {
+     lift.set_target(get_height_at_level(level_ - 1, init_height_));
+
+     claw.set_target_angle(85);
+
+     while (!lift.is_within_target_threshold() && !ctrler.get_digital_new_press(cancel_btn)) {}
+
+     claw.set_state(ClawState::OUTAKING);
+  }
+public:
+ static void chassis_update() {
+    const auto linear = ctrler.get_analog(pros::E_CONTROLLER_ANALOG_LEFT_Y);
+    const auto angular = ctrler.get_analog(pros::E_CONTROLLER_ANALOG_RIGHT_X);
+
+    chassis.arcade(linear, angular);
+  }
+
+  static void lift_update() {
+    const auto prev_level = level_;
+
+    if (ctrler.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R1)) lift_incr();
+    else if (ctrler.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_R2)) lift_decr();
+
+    if (level_ != prev_level) {
+      ctrler.rumble(".");
+    }
+  }
+
+  static void intake_update() {
+    claw.set_state(ClawState::INTAKING);
+
+    if (ctrler.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
+      intake.set_mode(IntakeMode::INTAKE);
+      return;
+    }
+
+    if (ctrler.get_digital(pros::E_CONTROLLER_DIGITAL_L2)) {
+      intake.set_mode(IntakeMode::OUTAKE);
+      claw.set_state(ClawState::OUTAKING);
+      return;
+    }
+
+    intake.set_mode(IntakeMode::STOPPED);
+  }
+
+  static void score_update() {
+    if (ctrler.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_Y)) {
+      score(pros::E_CONTROLLER_DIGITAL_Y);
+    }
+  }
+
+  static void update() {
+    chassis_update();
+    lift_update();
+    intake_update();
+    score_update();
+    lift.update();
+    claw.update();
+  }
+
+  static void loop() {
+    lift_task.suspend();
+    claw_task.suspend();
+
+    while (true) {
+      update();
+
+      pros::delay(10);
+    }
+  }
+};
+
+void opcontrol() {
+  OpControl::loop();
+}

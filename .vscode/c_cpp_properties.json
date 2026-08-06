@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "name": "PROS Project",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "/Users/milan/Downloads/10G-main/include",
+        "c:\\Users\\kumar\\Downloads\\10G-main 2\\10G-main\\include",
+        "c:\\Users\\wchen28\\Downloads\\10G-main-selector-v2\\10G-main\\include",
+        "/Users/milan/Downloads/10G-main v2 2/include",
+        "/Users/rk/Downloads/10G-main v2 2/include"
+      ],
+      "defines": [
+        "_DEBUG",
+        "UNICODE",
+        "_UNICODE"
+      ],
+      "compilerPath": "/Users/rk/Library/Application Support/Code/User/globalStorage/sigbots.pros/install/pros-toolchain-macos/bin/arm-none-eabi-g++",
+      "cStandard": "gnu11",
+      "cppStandard": "gnu++20",
+      "intelliSenseMode": "gcc-arm",
+      "macFrameworkPath": [
+        "/System/Library/Frameworks"
+      ],
+      "browse": {
+        "path": [
+          "/Users/rk/Downloads/10G-main v2 2"
+        ],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    }
+  ],
+  "version": 4
+}

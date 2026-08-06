@@ -1,0 +1,130 @@
+#include "main.h"
+#include "grape.hpp"
+#include "liblvgl/llemu.hpp"
+#include "ports.hpp"
+#include "auto_selector.hpp"
+#include "tasks.hpp"
+
+/**
+ * A callback function for LLEMU's center button.
+ *
+ * When this callback is fired, it will toggle line 2 of the LCD text between
+ * "I was pressed!" and nothing.
+ */
+void on_center_button() {
+	static bool pressed = false;
+	pressed = !pressed;
+	if (pressed) {
+		pros::lcd::set_text(2, "I was pressed!");
+	} else {
+		pros::lcd::clear_line(2);
+	}
+}
+
+/**
+ * Runs initialization code. This occurs as soon as the program is started.
+ *
+ * All other competition modes are blocked by initialize; it is recommended
+ * to keep execution time for this mode under a few seconds.
+ */
+void initialize() {
+    lift_task.suspend();
+    claw_task.suspend();
+
+	pros::lcd::initialize();
+	pros::lcd::set_text(1, "Hello PROS User!");
+
+	pros::lcd::register_btn1_cb(on_center_button);
+
+    // The claw rotation motor spins physically backwards from what positive
+    // power/velocity commands expect — reverse it so the PID's sign
+    // convention (negative = toward carry/scoring) drives it the right way.
+    claw_rotation_motor.set_reversed(true);
+
+    // The claw's rotation sensor was never zeroed, so on boot it reports
+    // whatever raw angle it happens to be at — not 0/loading like the code
+    // assumes. That mismatch made the PID chase the wrong target from tick
+    // one. Start the claw at its resting (loading) position for this to be
+    // accurate, then zero the sensor there.
+    claw_rotation_sensor.set_position(0);
+
+    // Home the lift: drive it down into its hard stop before zeroing, so 0
+    // always means the true physical bottom no matter where the arm happened
+    // to be resting when the robot powered on. Keep the lift clear while this
+    // runs. Power/duration are starting guesses — tune if it doesn't fully
+    // bottom out, or slams too hard, before it stops.
+    lift_motors.move(-100);
+    pros::delay(750);
+    lift_motors.move(0);
+    lift_rotation_sensor.reset_position();
+    pros::delay(250);
+
+    lift_motors.set_brake_mode_all(pros::MotorBrake::hold);
+    lift.reset();
+
+    // Calibrates the IMU and initializes LemLib odometry. Keep the robot still.
+    pros::lcd::set_text(2, "Calibrating IMU...");
+    chassis.calibrate();
+    pros::lcd::set_text(2, "Calibration complete");
+    static pros::Task print_coord([]() {
+        while (true) {
+            pros::lcd::clear_line(4);
+            pros::lcd::clear_line(5);
+            pros::lcd::print(4, "%f, %f, %f", chassis.getPose().x, chassis.getPose().y, chassis.getPose().theta);
+            //pros::lcd::print(5, "lift position(degrees): %lf", lift_rotation_sensor.get_position() / 100.0);
+            pros::delay(20);
+        }
+    });
+
+    lift_task.resume();
+    claw_task.resume();
+}
+
+/**
+ * Runs while the robot is in the disabled state of Field Management System or
+ * the VEX Competition Switch, following either autonomous or opcontrol. When
+ * the robot is enabled, this task will exit.
+ */
+void disabled() {}
+
+/**
+ * Runs after initialize(), and before autonomous when connected to the Field
+ * Management System or the VEX Competition Switch. This is intended for
+ * competition-specific initialization routines, such as an autonomous selector
+ * on the LCD.
+ *
+ * This task will exit when the robot is enabled and autonomous or opcontrol
+ * starts.
+ */
+void competition_initialize() {
+    auto_selector_init();
+}
+
+/**
+ * Runs the user autonomous code. This function will be started in its own task
+ * with the default priority and stack size whenever the robot is enabled via
+ * the Field Management System or the VEX Competition Switch in the autonomous
+ * mode. Alternatively, this function may be called in initialize or opcontrol
+ * for non-competition testing purposes.
+ *
+ * If the robot is disabled or communications is lost, the autonomous task
+ * will be stopped. Re-enabling the robot will restart the task, not re-start it
+ * from where it left off.
+ */
+void autonomous() {
+    fourpin();
+}
+
+/**
+ * Runs the operator control code. This function will be started in its own task
+ * with the default priority and stack size whenever the robot is enabled via
+ * the Field Management System or the VEX Competition Switch in the operator
+ * control mode.
+ *
+ * If no competition control is connected, this function will run immediately
+ * following initialize().
+ *
+ * If the robot is disabled or communications is lost, the
+ * operator control task will be stopped. Re-enabling the robot will restart the
+ * task, not resume it from where it left off.
+*/

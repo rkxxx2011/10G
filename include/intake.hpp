@@ -28,14 +28,6 @@ private:
                 move_callback_(-127);
             } else if (mode_ == IntakeMode::INTAKE) {
                 move_callback_(127);
-
-                accel_time += 10;
-
-                if (is_detecting_jam_ && accel_time > 100 && std::fabs(rpm_callback_()) < threshold_) {
-                    move_callback_(-127);
-
-                    pros::delay(400);
-                }
             } else if (mode_ == IntakeMode::STOPPED) {
                 move_callback_(0);
 

@@ -4,3 +4,4 @@ void fourpin();
 void sawp();
 void Right3_3();
 void fivepin();
+void fourpin_mirrored();

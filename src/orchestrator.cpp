@@ -120,7 +120,7 @@ void Orchestrator::update_score_sequence() {
         case ScoreSequencePhase::OUTTAKING: {
             if (elapsed_ms >= SCORE_OUTTAKE_MS) {
                 set_claw_state(ClawState::STOPPED);
-                move_claw_to_angle(claw_angle::GOONER);
+                move_claw_to_angle(claw_angle::CLIMB);
                 score_phase_ = ScoreSequencePhase::ROTATING_TO_MAX;
                 score_phase_start_ms_ = pros::millis();
             }

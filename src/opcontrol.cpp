@@ -18,16 +18,14 @@ private:
   static void lift_incr() {
     const auto prev_target = lift.get_target();
 
-    
-
-    lift.set_target(get_height_at_level(level_ += level_ == 1 ? 2 : 1, init_height_));
+    lift.set_target(get_height_at_level(level_ += 1, init_height_));
 
     if (lift.get_target() == prev_target) {
       level_--;
     }
 
     if (level_ > 1) {
-      claw.set_target_angle(claw_angle::GOONER);
+      claw.set_target_angle(claw_angle::CLIMB);
     }
   }
 
@@ -44,13 +42,41 @@ private:
   }
 
   static void score(pros::controller_digital_e_t cancel_btn) {
-     lift.set_target(get_height_at_level(level_ - 1, init_height_));
+    lift.set_target(get_height_at_level(level_ - 0.5, init_height_));
+    claw.set_target_angle(level_ / 5.f * (87 - 85) + 85);
+    for (size_t time = 0; time < 500; time += 10) {
+      lift.update();
+      claw.update();
+      pros::delay(10);
+    }
+    claw.set_state(ClawState::OUTAKING);
+    for (size_t time = 0; time < 500; time += 5) {
+      lift.update();
+      claw.update();
+      pros::delay(5);
+    }
+    lift.set_target(get_height_at_level(level_ + 0.5, init_height_));
+    claw.set_target_angle(claw_angle::CLIMB);
+  }
 
-     claw.set_target_angle(85);
+  static void toggle_init_height() {
+    if (init_height_ == init_heights::ALLIANCE) {
+      ctrler.rumble("--");
+      init_height_ = init_heights::NEUTRAL;
+      return;
+    }
 
-     while (!lift.is_within_target_threshold() && !ctrler.get_digital_new_press(cancel_btn)) {}
+    if (init_height_ == init_heights::NEUTRAL) {
+      ctrler.rumble("-.");
+      init_height_ = init_heights::MIDDLE;
+      return;
+    }
 
-     claw.set_state(ClawState::OUTAKING);
+    if (init_height_ == init_heights::MIDDLE) {
+      ctrler.rumble("..");
+      init_height_ = init_heights::ALLIANCE;
+      return;
+    }
   }
 public:
  static void chassis_update() {
@@ -101,6 +127,10 @@ public:
     score_update();
     lift.update();
     claw.update();
+
+    if (ctrler.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_DOWN)) {
+        toggle_init_height();
+    }
   }
 
   static void loop() {

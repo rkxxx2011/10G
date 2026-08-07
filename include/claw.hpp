@@ -18,7 +18,7 @@ namespace claw_angle {
     // Positive — the claw's real ~120 degrees of free travel from loading is
     // on this side; the negative direction jams within a few degrees.
     static inline constexpr float SCORING = 95; // scoring position angle
-    static inline constexpr float GOONER = 120; // the claw's real max travel — as high as it can go
+    static inline constexpr float CLIMB = 120; // the claw's real max travel — as high as it can go
 };
 
 class Claw {

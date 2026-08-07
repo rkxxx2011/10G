@@ -119,7 +119,7 @@ void fourpin() {
   intake.move(127);
 
   // Load rings
-  chassis.moveToPoint(0, 41, 3000, {.maxSpeed = 127, .minSpeed = 120});
+  chassis.moveToPoint(0, 50, 3000, {.maxSpeed = 127, .minSpeed = 120});
   chassis.waitUntilDone();
 
   pros::delay(1000);
@@ -185,6 +185,102 @@ void fourpin() {
   set_claw_tilt(65);
   chassis.arcade(-50, 0);
   pros::delay(500);
+  set_claw_state(ClawState::OUTAKING);
+}
+
+void fourpin_mirrored() {
+  set_claw_state(ClawState::INTAKING);
+  chassis.setBrakeMode(pros::E_MOTOR_BRAKE_HOLD);
+  chassis.setPose(0.0, 0.0, 0.0);
+  intake.disable_jam_detection();
+
+  chassis.moveToPoint(0, -5, 1000, {.minSpeed = 127});
+  chassis.moveToPoint(0, 0, 1000, {.forwards = false, .minSpeed = 127});
+  chassis.waitUntilDone();
+
+  pros::delay(200);
+
+  chassis.arcade(100, 0);
+  pros::delay(300);
+
+  set_level(1, init_heights::NEUTRAL);
+  set_claw_tilt(claw_angle::LOADING);
+  intake.move(127);
+
+  // Load rings
+  chassis.moveToPoint(0, -41, 3000, {.maxSpeed = 127, .minSpeed = 120});
+  chassis.waitUntilDone();
+
+  pros::delay(1000);
+
+  // Mirrored
+  chassis.moveToPose(7, -10, 70, 1000,
+                     {.forwards = false, .minSpeed = 90});
+
+  chassis.moveToPoint(-28, -26, 1000,
+                      {.forwards = false, .minSpeed = 60});
+
+  set_level(3.5, init_heights::NEUTRAL);
+
+  pros::delay(425);
+
+  set_claw_tilt(claw_angle::SCORING - 3.4);
+  pros::delay(100);
+  set_level(3.5, init_heights::NEUTRAL);
+
+  chassis.waitUntilDone();
+
+  chassis.arcade(-50, 0);
+  pros::delay(100);
+
+  set_level(2, init_heights::NEUTRAL);
+
+  pros::delay(900);
+
+  set_claw_state(ClawState::OUTAKING);
+
+  pros::delay(400);
+
+  set_level(3.5, init_heights::NEUTRAL);
+
+  pros::delay(400);
+
+  set_claw_tilt(claw_angle::SCORING - 5);
+
+  pros::delay(100);
+
+  set_level(3.5, init_heights::NEUTRAL);
+
+  chassis.arcade(0, 0);
+  pros::delay(100);
+
+  // Mirrored odom reset
+  circle_reset(RESET_NEUTRAL_GOAL);
+
+  pros::delay(100);
+
+  chassis.moveToPoint(14, -21, 3000, {.maxSpeed = 100});
+  chassis.waitUntilDone();
+
+  set_level(1, init_heights::INTAKE);
+  set_claw_tilt(claw_angle::LOADING);
+  set_claw_state(ClawState::INTAKING);
+  intake.set_mode(IntakeMode::INTAKE);
+
+  chassis.moveToPose(1, -27, 90, 5000, {.maxSpeed = 70});
+  chassis.waitUntilDone();
+
+  chassis.moveToPoint(36, -7, 2000,
+                      {.forwards = false, .minSpeed = 80});
+
+  pros::delay(250);
+  chassis.waitUntilDone();
+
+  set_claw_tilt(65);
+
+  chassis.arcade(-50, 0);
+  pros::delay(500);
+
   set_claw_state(ClawState::OUTAKING);
 }
 
@@ -568,7 +664,7 @@ void fivepin() {
   set_claw_tilt(claw_angle::LOADING);
   pros::delay(800);
   // original: clawToStage(3); (claw to stage 3)
-  set_claw_tilt(claw_angle::GOONER);
+  set_claw_tilt(claw_angle::CLIMB);
   // original: liftToStage(1); (lift to stage 1)
   set_level(1, init_heights::NEUTRAL);
   // original: heightMode=0; (lift height mode set to 0)

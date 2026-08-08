@@ -11,13 +11,13 @@
 #include <functional>
 
 namespace init_heights {
-  constexpr float NEUTRAL = 12;
+  constexpr float NEUTRAL = 13;
   constexpr float ALLIANCE = 5;
   constexpr float MIDDLE = 26;
   constexpr float INTAKE = 0;
 }
 
-inline float get_height_at_level(const float level, const float init_height, const float height_increment = 20) {
+inline float get_height_at_level(const float level, const float init_height, const float height_increment = 15) {
     return level > 1 ? init_height + height_increment * (level - 2) : init_heights::INTAKE;
 }
 
@@ -38,7 +38,7 @@ public:
         const std::function<float()> position_callback,
         const float feed_forward = 0,
         const float min_position = 0,
-        const float max_position = 100,
+        const float max_position = 110,
         const float stopping_threshold = 1
     ) : pid_{kp, ki, kd},
         stopping_threshold_{stopping_threshold},

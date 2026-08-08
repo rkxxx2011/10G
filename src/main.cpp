@@ -28,9 +28,6 @@ void on_center_button() {
  * to keep execution time for this mode under a few seconds.
  */
 void initialize() {
-    lift_task.suspend();
-    claw_task.suspend();
-
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "Hello PROS User!");
 
@@ -75,9 +72,6 @@ void initialize() {
             pros::delay(20);
         }
     });
-
-    lift_task.resume();
-    claw_task.resume();
 }
 
 /**
@@ -97,7 +91,7 @@ void disabled() {}
  * starts.
  */
 void competition_initialize() {
-    auto_selector_init();
+    //auto_selector_init();
 }
 
 /**
@@ -112,7 +106,7 @@ void competition_initialize() {
  * from where it left off.
  */
 void autonomous() {
-    fourpin();
+    fourpin_mirrored();
 }
 
 /**

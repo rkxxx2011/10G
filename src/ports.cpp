@@ -103,7 +103,6 @@ Dr4b lift {
     [](const auto motor_power) {
         // Use direct power for the lift. A gravity feedforward value represents
         // holding torque and must not be interpreted as a target velocity.
-        printf("lift power: %f\n", motor_power);
         lift_motors.move(static_cast<std::int32_t>(motor_power));
     },
     []() {

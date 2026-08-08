@@ -42,20 +42,26 @@ private:
   }
 
   static void score(pros::controller_digital_e_t cancel_btn) {
-    lift.set_target(get_height_at_level(level_ - 0.5, init_height_));
-    claw.set_target_angle(level_ / 5.f * (87 - 85) + 85);
+    lift.set_target(get_height_at_level(level_ - 0.25, init_height_));
+    claw.set_target_angle(130);
     for (size_t time = 0; time < 500; time += 10) {
       lift.update();
       claw.update();
       pros::delay(10);
     }
+    claw.set_target_angle(82);
+    for (size_t time = 0; time < 150; time += 10) {
+      lift.update();
+      claw.update();
+      pros::delay(10);
+    }
     claw.set_state(ClawState::OUTAKING);
-    for (size_t time = 0; time < 500; time += 5) {
+    for (size_t time = 0; time < 350; time += 5) {
       lift.update();
       claw.update();
       pros::delay(5);
     }
-    lift.set_target(get_height_at_level(level_ + 0.5, init_height_));
+    lift.set_target(get_height_at_level(level_ + 0.75, init_height_));
     claw.set_target_angle(claw_angle::CLIMB);
   }
 
@@ -131,12 +137,27 @@ public:
     if (ctrler.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_DOWN)) {
         toggle_init_height();
     }
+
+    if (ctrler.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP)) {
+      lift.set_target(0);
+      claw.set_target_angle(70);
+      for (size_t time = 0; time < 400; time += 10) {
+      lift.update();
+      claw.update();
+      pros::delay(10);
+    }
+      claw.set_state(ClawState::OUTAKING);
+      for (size_t time = 0; time < 500; time += 10) {
+      lift.update();
+      claw.update();
+      pros::delay(10);
+    }
+      lift.set_target(get_height_at_level(1, init_height_));
+      claw.set_state(ClawState::INTAKING);
+    }
   }
 
   static void loop() {
-    lift_task.suspend();
-    claw_task.suspend();
-
     while (true) {
       update();
 

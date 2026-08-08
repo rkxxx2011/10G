@@ -140,20 +140,20 @@ public:
 
     if (ctrler.get_digital_new_press(pros::E_CONTROLLER_DIGITAL_UP)) {
       lift.set_target(0);
-      claw.set_target_angle(70);
-      for (size_t time = 0; time < 400; time += 10) {
+      claw.set_target_angle(76);
+      for (size_t time = 0; time < 200; time += 5) {
       lift.update();
       claw.update();
-      pros::delay(10);
+      pros::delay(5);
     }
-      claw.set_state(ClawState::OUTAKING);
-      for (size_t time = 0; time < 500; time += 10) {
+      
+      claw.set_state(static_cast<ClawState>(-40));
+      for (size_t time = 0; time < 325; time += 5) {
       lift.update();
       claw.update();
-      pros::delay(10);
+      pros::delay(5);
     }
-      lift.set_target(get_height_at_level(1, init_height_));
-      claw.set_state(ClawState::INTAKING);
+      claw.set_state(ClawState::STOPPED);
     }
   }
 

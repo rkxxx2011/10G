@@ -7,3 +7,5 @@ void fivepin();
 void fourpin_mirrored();
 void fourpin_mirrored_mirrored();
 void skills();
+void sawp_v2();
+void no_skill();

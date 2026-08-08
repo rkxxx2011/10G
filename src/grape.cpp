@@ -194,11 +194,11 @@ void fourpin() {
   chassis.waitUntilDone();
   chassis.moveToPoint(36, 7, 2000, {.forwards = false, .minSpeed = 80});
   pros::delay(300);
-  set_claw_tilt(65);
+  set_claw_tilt(76);
   chassis.waitUntilDone();
   chassis.arcade(-50, 0);
   pros::delay(500);
-  set_claw_state(ClawState::OUTAKING);
+  set_claw_state(static_cast<ClawState>(-40));
 }
 
 void fourpin_mirrored() {
@@ -240,7 +240,7 @@ void fourpin_mirrored() {
 
   pros::delay(425);
 
-  set_claw_tilt(claw_angle::SCORING - 3.4);
+  set_claw_tilt(claw_angle::SCORING - 6.7);
   pros::delay(100);
   set_level(3.5, init_heights::NEUTRAL);
 
@@ -571,101 +571,289 @@ void skills(){
 
 }
 
-/*
-void ethan() {
-    chassis.setPose(-62.5, -0.3125, 90);
-    chassis.moveToPoint(-56, -0.3125, 400);
-    chassis.waitUntilDone();
-    chassis.moveToPoint(-62.5, -0.3125, 300, {.forwards = false, .minSpeed = 110});
-    chassis.waitUntilDone();
-    chassis.moveToPoint(-56, -0.3125, 400);
-    chassis.waitUntilDone();
-    chassis.moveToPoint(-62.5, -0.3125, 300,{.forwards = false, .minSpeed = 110});
-    chassis.waitUntilDone();
-    set_claw_state(ClawState::OUTAKING);
-    intake.move(127);
-    chassis.moveToPoint(-26.98, -0.3125, 850, {.earlyExitRange = 5});
-    chassis.waitUntilDone();
-    chassis.moveToPoint(-15.98, -0.3125, 850, {.maxSpeed = 53});
-    chassis.waitUntilDone();
-    pros::delay(250);
-    chassis.turnToPoint(-43.612, 19.168, 520, {.forwards = false});
-    chassis.moveToPoint(-43.612, 19.168, 1000, {.forwards = false});
-    pros::delay(100);
-    set_lift(40);
-    set_claw_tilt(34);
-    chassis.waitUntilDone();
-    chassis.arcade(-120, 0);
-    pros::delay(100);
-    set_lift(36);
-    pros::delay(200);
-    set_claw_state(ClawState::INTAKING);
-    pros::delay(300);
-    // DsrMain.setDsrPose(chassis.getPose());  // Reset dsr Pose to Lemlib Pose
-    // DsrMain.updateBotPose(&right_dsr);   // Distance reset on the left sensor
-    // DsrMain.setDsrPose(chassis.getPose());  // Reset dsr Pose to Lemlib Pose
-    clawtarget = clawstart + 51000;
-    set_claw_tilt(51);
-    chassis.moveToPoint(-35.982, 8.652, 530);
-    set_claw_state(ClawState::OUTAKING);
-    intake.move(127);
-    chassis.turnToPoint(-25.246, 17.263, 530);
-    clawtarget = clawstart;
-    targetpos = startpos;
-    chassis.moveToPoint(-25.246, 17.263, 800);
-    pros::delay(150);
-    chassis.turnToPoint(-47.193, -17.083, 500, {.forwards = false});
-    chassis.moveToPoint(-47.193, -17.083, 970, {.forwards = false});
-    pros::delay(500);
-    clawtarget = clawstart + 32000;
-    chassis.waitUntilDone();
-    chassis.arcade(-127, 0);
-    pros::delay(175);
-    setClaw(127);
-    pros::delay(100);
-    DsrMain.setDsrPose(chassis.getPose());  // Reset dsr Pose to Lemlib Pose
-    DsrMain.updateBotPose(&left_dsr);   // Distance reset on the left sensor
-    DsrMain.setDsrPose(chassis.getPose());  // Reset dsr Pose to Lemlib Pose
-    pros::delay(250);
-    chassis.moveToPoint(-36.635, -10.417, 600);
-    set_claw_state(ClawState::OUTAKING);
-    targetpos = startpos;
-    clawtarget = clawstart + 51000;
-    chassis.turnToPoint(-33.26, -13.339, 750, {.forwards = false});
-    chassis.waitUntilDone();
-    // DsrMain.setDsrPose(chassis.getPose());  // Reset dsr Pose to Lemlib Pose
-    // DsrMain.updateBotPose(&left_dsr);   // Distance reset on the left sensor
-    // DsrMain.setDsrPose(chassis.getPose());  // Reset dsr Pose to Lemlib Pose
-    chassis.moveToPoint(-33.26, -13.339, 400, {.forwards = false});
-    chassis.waitUntilDone();
+void no_skill() {
+  intake.set_mode(IntakeMode::INTAKE);
+  set_claw_state(ClawState::INTAKING);
+  chassis.setPose(0, 0, 0);
+  chassis.moveToPoint(0, 5, 1000, {.minSpeed = 127});
+  chassis.waitUntilDone();
+  pros::delay(100);
+  chassis.moveToPoint(0, 0, 1000, {.forwards = false, .minSpeed = 127});
+  chassis.moveToPoint(0, 5, 1000, {.minSpeed = 127});
+  chassis.waitUntilDone();
+  chassis.moveToPoint(0, 0, 1000, {.forwards = false, .minSpeed = 127});
+  chassis.waitUntilDone();
+  chassis.moveToPose(0, 20, -90, 2000, {.minSpeed = 50});
+  chassis.moveToPoint(20, 20, 1000, {.forwards = false, .minSpeed = 90});
+  pros::delay(300);
+  set_claw_tilt(70);
+  chassis.waitUntilDone();
+  chassis.arcade(-50, 0);
+  pros::delay(150);
+  set_claw_state(ClawState::OUTAKING);
+  circle_reset(RESET_ALLIANCE_GOAL);
+  pros::delay(400);
+  set_claw_tilt(130);
+  intake.set_mode(IntakeMode::STOPPED);
+  chassis.turnToHeading(-45, 4000, {.minSpeed = 120});
+  chassis.moveToPoint(-7, 10, 1000, {.minSpeed = 127});
+  chassis.moveToPoint(40, 10, 1000, {.minSpeed = 100});
+  chassis.moveToPose(35, -35, 180, 2000, {.maxSpeed = 127, .minSpeed = 40});
+  chassis.waitUntilDone();
+  set_claw_tilt(0);
+  intake.set_mode(IntakeMode::INTAKE);
+  chassis.moveToPoint(35,-40,2000, {.minSpeed = 100});
+  chassis.waitUntilDone();
+  pros::delay(3000);
+  chassis.moveToPose(5,-5, 90, 2000, {.forwards = false, .minSpeed = 100});
+  chassis.waitUntilDone();
 
-    pros::Task liftTask2([]() {
-        while (true) {
-            lift.move(-100);
-            pros::delay(10);
-        }
-    });
-    targetpos = startpos;
+}
 
-    getstack();
+void sawp_v2() {
 
-    liftTask2.remove();
-    lift.move(0);
-    liftOverride = false;
+  chassis.setPose(-69.104, 0.291, 90);
 
-    pros::delay(75);
-    chassis.turnToPoint(-45.823, -21.051, 650, {.forwards = false});
-    targetpos = startpos + 2400;
-    chassis.moveToPoint(-45.853, -21.051, 760, {.forwards = false});
-    chassis.waitUntilDone();
-    chassis.arcade(-127, 0);
-    pros::delay(100);
-    targetpos = startpos + 1800;
-    pros::delay(200);
-    setClaw(127);
-    pros::delay(250);
-    targetpos = startpos + 3000;
-}*/
+  set_claw_state(ClawState::INTAKING);
+  chassis.moveToPoint(-63,0.291,700,{.maxSpeed=110});
+  chassis.moveToPoint(-72, 0.291,800,{.forwards=false,.minSpeed=120});
+  chassis.moveToPoint(-63,0.291,700,{.maxSpeed=110});
+  chassis.moveToPoint(-72, 0.291,800,{.forwards=false, .minSpeed=120});
+  chassis.waitUntilDone();
+  chassis.setBrakeMode(pros::E_MOTOR_BRAKE_BRAKE);
+  chassis.swingToHeading(-13,DriveSide::LEFT,800,{.direction=AngularDirection::CCW_COUNTERCLOCKWISE,.maxSpeed=90});
+  intake.move(127);
+  set_level(1, init_heights::NEUTRAL);
+
+  chassis.waitUntilDone();
+  chassis.moveToPoint(-58,-14,1000,{.forwards=false,.maxSpeed=90});
+  pros::delay(150);
+  set_claw_tilt(claw_angle::LOADING);
+  chassis.waitUntilDone();
+  chassis.arcade(-127, 0);
+  pros::delay(200);
+  set_claw_state(ClawState::OUTAKING);
+  pros::delay(200);
+  set_level(1, init_heights::NEUTRAL);
+  chassis.waitUntilDone();
+
+  pros::delay(100);
+  set_claw_tilt(claw_angle::LOADING);
+  set_claw_state(ClawState::INTAKING);
+
+  chassis.moveToPoint(-47.067,-5.354,800,{.maxSpeed=80});
+  chassis.turnToHeading(-40,700,{.direction=AngularDirection::CCW_COUNTERCLOCKWISE,.maxSpeed=90});
+  chassis.waitUntilDone();
+  chassis.moveToPoint(-30.059,-17.832,800,{.forwards=false,.maxSpeed=70});
+  set_level(1, init_heights::NEUTRAL);
+  chassis.waitUntilDone();
+
+  set_level(1, init_heights::NEUTRAL);
+  chassis.waitUntilDone();
+  pros::delay(150);
+
+  set_claw_state(ClawState::INTAKING);
+
+  chassis.turnToHeading(-287,800,{.maxSpeed=80});
+  set_claw_tilt(claw_angle::SCORING);
+  set_level(2, init_heights::NEUTRAL);
+  chassis.moveToPoint(-46.859,-24.032,700,{.forwards=false,.maxSpeed=90});
+  chassis.waitUntilDone();
+  chassis.arcade(-127, 0);
+
+  pros::delay(100);
+  set_claw_state(ClawState::OUTAKING);
+
+  set_claw_tilt(claw_angle::LOADING);
+  chassis.moveToPoint(-30.332,-23.513,800,{.maxSpeed=110});
+  chassis.waitUntilDone();
+  chassis.moveToPoint(-29.604,-30.373,900,{.maxSpeed=100});
+  chassis.waitUntilDone();
+  set_level(1, init_heights::NEUTRAL);
+  chassis.turnToHeading(42,900,{.direction=AngularDirection::CCW_COUNTERCLOCKWISE,.maxSpeed=85});
+  set_claw_tilt(claw_angle::LOADING);
+
+  chassis.waitUntilDone();
+  chassis.moveToPoint(-42.375,-43.909,800,{.forwards=false,.maxSpeed=85});
+  set_claw_state(ClawState::INTAKING);
+  chassis.waitUntilDone();
+
+  set_level(1, init_heights::NEUTRAL);
+  chassis.waitUntilDone();
+
+  set_claw_state(ClawState::INTAKING);
+
+  chassis.moveToPoint(-51.375,-51.509,800,{.forwards=false,.maxSpeed=95});
+
+  chassis.turnToHeading(153,700,{.maxSpeed=100});
+  set_claw_tilt(claw_angle::SCORING);
+  set_level(2.75, init_heights::NEUTRAL);
+  chassis.waitUntilDone();
+  chassis.moveToPoint(-53.547,-30.176,900,{.forwards=false,.maxSpeed=90});
+  chassis.waitUntilDone();
+  chassis.arcade(-70, 0);
+
+  pros::delay(100);
+  set_claw_state(ClawState::OUTAKING);
+
+  set_claw_tilt(claw_angle::CLIMB);
+
+  intake.move(127);
+
+  chassis.moveToPoint(-49.77,-59.854,900,{.maxSpeed=100});
+  pros::delay(400);
+  set_level(1, init_heights::NEUTRAL);
+  set_claw_tilt(claw_angle::LOADING);
+  chassis.waitUntilDone();
+  chassis.turnToHeading(270,750,{.maxSpeed=100});
+  chassis.waitUntilDone();
+
+  chassis.moveToPoint(-72.272,-59.466,700,{.maxSpeed=110,.minSpeed=20});
+  chassis.waitUntilDone();
+  chassis.arcade(100,0);
+  pros::delay(800);
+
+  set_claw_state(ClawState::INTAKING);
+  chassis.moveToPoint(-38.543,-48.345,800,{.forwards=false,.maxSpeed=80});
+  chassis.moveToPoint(-25.03,-47.732,800,{.forwards=false,.maxSpeed=70});
+  pros::delay(200);
+  set_claw_tilt(claw_angle::LOADING);
+  chassis.waitUntilDone();
+  chassis.arcade(-80, 0);
+  pros::delay(300);
+  chassis.arcade(0,0);
+  set_claw_state(ClawState::OUTAKING);
+  pros::delay(200);
+  set_level(1, init_heights::NEUTRAL);
+
+  chassis.moveToPoint(-63.917,-59.5,800,{.maxSpeed=90});
+  chassis.waitUntilDone();
+  chassis.turnToHeading(270,500,{.maxSpeed=90});
+  set_claw_state(ClawState::INTAKING);
+  set_claw_tilt(claw_angle::LOADING);
+
+  chassis.moveToPoint(-72.272,-58.3,900,{.maxSpeed=100});
+  chassis.waitUntilDone();
+  chassis.arcade(90,0);
+  pros::delay(1000);
+
+  chassis.moveToPoint(-38.543,-49.345,800,{.forwards=false,.maxSpeed=80});
+  pros::delay(200);
+  set_claw_tilt(claw_angle::LOADING);
+  set_level(2, init_heights::NEUTRAL);
+  chassis.moveToPoint(-25.03,-47.732,800,{.forwards=false,.maxSpeed=70});
+
+  chassis.waitUntilDone();
+  chassis.arcade(-100, 0);
+
+  pros::delay(150);
+  chassis.arcade(0,0);
+  set_claw_state(ClawState::OUTAKING);
+  pros::delay(200);
+  set_claw_tilt(claw_angle::CLIMB);
+
+  chassis.moveToPoint(-63.917,-59.4,1000,{.maxSpeed=90});
+  set_claw_state(ClawState::INTAKING);
+  chassis.waitUntilDone();
+  chassis.turnToHeading(270,500,{.maxSpeed=90});
+  set_claw_tilt(claw_angle::LOADING);
+  chassis.moveToPoint(-72.272,-58.9,900,{.maxSpeed=80});
+  set_claw_state(ClawState::INTAKING);
+  set_level(1, init_heights::NEUTRAL);
+  set_claw_tilt(claw_angle::LOADING);
+  chassis.waitUntilDone();
+  chassis.arcade(90,0);
+  pros::delay(1000);
+
+  chassis.moveToPoint(-38.543,-48.345,800,{.forwards=false,.maxSpeed=80});
+  set_claw_tilt(claw_angle::SCORING);
+  set_level(2.75, init_heights::NEUTRAL);
+  chassis.moveToPoint(-25.03,-47.732,800,{.forwards=false,.maxSpeed=70});
+  chassis.waitUntilDone();
+  chassis.arcade(-80, 0);
+
+  pros::delay(300);
+  chassis.arcade(0,0);
+
+  set_claw_state(ClawState::OUTAKING);
+  pros::delay(100);
+
+  set_claw_tilt(claw_angle::CLIMB);
+
+  chassis.moveToPoint(-63.917,-58.9,800,{.maxSpeed=90});
+  set_claw_state(ClawState::INTAKING);
+  chassis.turnToHeading(270,500,{.maxSpeed=100});
+  set_claw_tilt(claw_angle::LOADING);
+  set_level(1, init_heights::NEUTRAL);
+  chassis.moveToPoint(-72.272,-57.9,900,{.maxSpeed=100});
+
+  set_claw_state(ClawState::INTAKING);
+  chassis.waitUntilDone();
+  chassis.arcade(100,0);
+  pros::delay(1000);
+
+  chassis.moveToPoint(-38.543,-48.345,800,{.forwards=false,.maxSpeed=80});
+  set_claw_tilt(claw_angle::SCORING);
+  set_level(3.5, init_heights::NEUTRAL);
+  chassis.moveToPoint(-25.03,-47.232,800,{.forwards=false,.maxSpeed=70});
+  chassis.waitUntilDone();
+  chassis.arcade(-70, 0);
+
+  pros::delay(300);
+  chassis.arcade(0,0);
+
+  pros::delay(400);
+  set_claw_state(ClawState::OUTAKING);
+  pros::delay(100);
+
+  set_claw_tilt(claw_angle::CLIMB);
+
+  chassis.moveToPoint(-63.917,-58,900,{.maxSpeed=100});
+  chassis.turnToHeading(270,400,{.maxSpeed=100});
+  set_claw_state(ClawState::INTAKING);
+  set_claw_tilt(claw_angle::LOADING);
+  set_level(1, init_heights::NEUTRAL);
+  chassis.moveToPoint(-72.272,-58,600,{.maxSpeed=100});
+
+  set_claw_state(ClawState::INTAKING);
+
+  chassis.waitUntilDone();
+  chassis.arcade(100,0);
+  pros::delay(1000);
+
+  chassis.moveToPoint(-56.314,-48.148,800,{.forwards=false,.maxSpeed=80});
+  chassis.waitUntilDone();
+  chassis.turnToHeading(180,800,{.direction=AngularDirection::CCW_COUNTERCLOCKWISE,.maxSpeed=80});
+  set_claw_tilt(claw_angle::SCORING);
+  set_level(3.5, init_heights::NEUTRAL);
+  chassis.waitUntilDone();
+  chassis.moveToPoint(-55.483,-20.448,1200,{.forwards=false,.maxSpeed=70});
+  chassis.waitUntilDone();
+  chassis.arcade(-60, 0);
+
+  pros::delay(300);
+  chassis.arcade(0,0);
+  pros::delay(400);
+
+  set_claw_state(ClawState::OUTAKING);
+  pros::delay(100);
+
+  chassis.moveToPoint(-53.154, -22.353, 500, {.maxSpeed=80});
+  chassis.turnToHeading(60,900,{.direction=AngularDirection::CCW_COUNTERCLOCKWISE,.maxSpeed=90});
+  pros::delay(400);
+  set_level(1, init_heights::NEUTRAL);
+  set_claw_tilt(claw_angle::LOADING);
+  chassis.moveToPoint(6, -15, 1000, {.maxSpeed=100, .earlyExitRange = 5});
+  chassis.turnToHeading(0, 800, {.direction=AngularDirection::CCW_COUNTERCLOCKWISE,.maxSpeed=80});
+  chassis.waitUntilDone();
+  chassis.moveToPoint(chassis.getPose().x, -75, 1000, {.forwards = false, .minSpeed = 120});
+  chassis.waitUntilDone();
+  chassis.moveToPoint(chassis.getPose().x, -53, 1000);
+  chassis.waitUntilDone();
+  chassis.moveToPoint(chassis.getPose().x, -75, 1000, {.forwards = false, .minSpeed = 120});
+  chassis.waitUntilDone();
+  chassis.moveToPoint(-5,-8,3000,{.minSpeed=130});
+}
 
 void sawp() {
   chassis.setBrakeMode(

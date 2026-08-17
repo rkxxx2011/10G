@@ -1,4 +1,5 @@
 #include "orchestrator.hpp"
+#include <algorithm>
 #include <cstddef>
 
 Orchestrator::Orchestrator(
@@ -81,9 +82,10 @@ void Orchestrator::handle_outtake() {
 void Orchestrator::start_score_sequence() {
     if (score_phase_ != ScoreSequencePhase::IDLE) return; // already running, ignore
 
-    if (dr4b_) {
-        const float dropped_target = dr4b_->get_target() - SCORE_LIFT_DROP_DEG;
-        dr4b_->set_target(dropped_target < 0.0f ? 0.0f : dropped_target);
+    // Raise the lift to the scoring floor if it's currently below it — never
+    // lowers it if it's already higher.
+    if (dr4b_ && dr4b_->get_target() < SCORE_MIN_LIFT_TARGET_DEG) {
+        dr4b_->set_target(SCORE_MIN_LIFT_TARGET_DEG);
     }
 
     score_phase_ = ScoreSequencePhase::LOWERING;
@@ -100,7 +102,7 @@ void Orchestrator::update_score_sequence() {
         case ScoreSequencePhase::LOWERING: {
             const bool settled = dr4b_ && dr4b_->is_within_target_threshold();
             if (settled || elapsed_ms >= SCORE_PHASE_TIMEOUT_MS) {
-                move_claw_to_angle(claw_angle::SCORING);
+                move_claw_to_angle(std::max(claw_angle::SCORING, SCORE_MIN_CLAW_ANGLE_DEG));
                 score_phase_ = ScoreSequencePhase::ROTATING_TO_SCORE;
                 score_phase_start_ms_ = pros::millis();
             }

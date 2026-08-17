@@ -22,12 +22,25 @@ inline constexpr size_t LIFT_MAX_LEVEL = 10;
 inline constexpr float CLAW_ANGLE_CARRY = 110;
 
 // ==================== SCORING SEQUENCE (Y button) ====================
-// 1. Lift drops a bit. 2. Claw rotates to scoring angle. 3. Outtake for
-// SCORE_OUTTAKE_MS. 4. Claw rotates all the way up to its max travel.
-// No degrees-to-inches calibration exists for this lift, so this is a rough
-// starting guess for "~2 inches" (well under one full LIFT_STEP_HEIGHT) —
-// tune this number directly based on what you actually see it drop.
+// 1. Lift is raised to at least SCORE_MIN_LIFT_TARGET_DEG (never lowered
+// below it, but left alone if it's already higher). 2. Claw rotates to at
+// least SCORE_MIN_CLAW_ANGLE_DEG (0 = face down, so this is a floor on how
+// far down it's allowed to rotate). 3. Outtake for SCORE_OUTTAKE_MS.
+// 4. Claw rotates all the way up to its max travel.
+// SCORE_LIFT_DROP_DEG is currently unused (lift no longer drops before
+// scoring) — left here in case that behavior is wanted again later.
 inline constexpr float SCORE_LIFT_DROP_DEG = 5.0f;
+// Minimum lift target enforced the instant scoring starts. Fixes the arm
+// ending up too low to actually score — whether from gravity sag or the
+// lift simply being at a low level when Y is pressed. This is in the same
+// raw sensor-degree units the lift's set_target()/get_target() already use
+// (not a calibrated physical measurement) — tune on the real robot.
+inline constexpr float SCORE_MIN_LIFT_TARGET_DEG = 80.0f;
+// Minimum claw rotation angle used when scoring (0 = face down, matching
+// claw_angle::LOADING). Fixes the claw rotating too far down to actually
+// score — whatever angle the scoring flow would otherwise use gets raised
+// to at least this floor.
+inline constexpr float SCORE_MIN_CLAW_ANGLE_DEG = 80.0f;
 inline constexpr std::uint32_t SCORE_OUTTAKE_MS = 350;
 // Safety cap per phase in case a motion never settles within its stopping
 // threshold (e.g. a stall) — keeps the sequence from hanging forever.

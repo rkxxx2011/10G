@@ -76,6 +76,10 @@ lemlib::Chassis chassis {drivetrain, // drivetrain settings
                         odom_pods // odometry sensors
 };
 
+// EZ-Template-style wrapper around the chassis above — see ports.hpp for how
+// this relates to `chassis`.
+EzChassis ez_chassis {chassis};
+
 pros::Controller ctrler {pros::E_CONTROLLER_MASTER};
 
 Claw claw {
@@ -88,7 +92,13 @@ Claw claw {
     },
     [](const auto target_power) {
         claw_flex_wheels.move(target_power);
-    }
+    },
+    // Gravity-holding feedforward (out of -127..127) — previously nonexistent
+    // on the claw entirely, meaning nothing fought gravity and it could only
+    // hold a target by sagging toward 0/face-down first. UNTESTED starting
+    // guess — tune on the real robot: still sags -> increase, drifts/creeps
+    // upward at rest -> decrease.
+    10
 };
 
 // The rotation sensor is mounted on the 24-tooth center gear. The original
@@ -107,7 +117,16 @@ Dr4b lift {
     },
     []() {
         return static_cast<float>(lift_rotation_sensor.get_position()) / 100.0f;
-    }
+    },
+    // Gravity-holding feedforward (out of -127..127, same units as motor_power
+    // above). This was previously left at its default of 0, meaning nothing
+    // actively fought gravity — the lift only held a level by sagging just
+    // far enough for the resulting PID error to generate holding torque,
+    // which gets worse the higher/more extended the arm is (visible as the
+    // arm drooping around the 4th stack and up). This is an UNTESTED
+    // starting guess — tune it up/down on the real robot: too low and it'll
+    // still sag, too high and it'll drift/creep upward on its own at rest.
+    15
 };
 
 // Non-owning shared_ptrs: these just wrap the existing globals above so

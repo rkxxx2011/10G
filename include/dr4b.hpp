@@ -17,8 +17,18 @@ namespace init_heights {
   constexpr float INTAKE = 0;
 }
 
+// Extra height added to every level-3-and-up target (i.e. every upward move
+// to a scoring tier — level 3.5 is used throughout grape.cpp as "the"
+// scoring height). Fixes the claw sitting too low to score above tier 3.
+// This is in the same raw units get_height_at_level() already works in
+// (not a calibrated physical inch) — nudge this up/down if it still sits a
+// bit low/high once tested on the real robot.
+inline constexpr float UPPER_TIER_EXTRA_HEIGHT = 1.0f;
+
 inline float get_height_at_level(const float level, const float init_height, const float height_increment = 15) {
-    return level > 1 ? init_height + height_increment * (level - 2) : init_heights::INTAKE;
+    if (level <= 1) return init_heights::INTAKE;
+    const float height = init_height + height_increment * (level - 2);
+    return level >= 3 ? height + UPPER_TIER_EXTRA_HEIGHT : height;
 }
 
 class Dr4b {

@@ -1,4 +1,5 @@
 #include "claw.hpp"
+#include "lemlib/util.hpp"
 
 namespace {
 // Reject a disconnected/glitched sensor reading before it can cause a sudden
@@ -23,7 +24,8 @@ void Claw::update() {
         }
 
         rotate_callback_(std::clamp<float>(
-            angular_pid_.update(target_angle_ - filtered_position_),
+            angular_pid_.update(target_angle_ - filtered_position_)
+                + feed_forward_ * std::sin(lemlib::degToRad(filtered_position_)),
                 -127, 127
             )
         );

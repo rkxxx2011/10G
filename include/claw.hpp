@@ -27,6 +27,7 @@ private:
     lemlib::PID angular_pid_;
     float target_angle_ = 0;
     float stopping_threshold_ = 0;
+    float feed_forward_ = 0;
     std::function<void(float)> rotate_callback_;
     std::function<void(float)> flex_wheel_callback_;
     std::function<float()> position_callback_;
@@ -42,9 +43,11 @@ public:
         const std::function<void(float)> rotate_callback,
         const std::function<float()> position_callback,
         const std::function<void(float)> flex_wheel_callback,
+        const float feed_forward = 0,
         const float stopping_threshold = 1
     ) : angular_pid_ {kp, ki, kd},
         stopping_threshold_ {stopping_threshold},
+        feed_forward_ {feed_forward},
         rotate_callback_ {rotate_callback},
         position_callback_ {position_callback},
         flex_wheel_callback_ {flex_wheel_callback} {}
@@ -58,6 +61,9 @@ public:
     void set_target_angle(const float target_angle) {
         target_angle_ = target_angle;
     }
+
+    float get_feed_forward() {return feed_forward_;}
+    void set_feed_forward(const float feed_forward) {feed_forward_ = feed_forward;}
 
     float get_stopping_threshold() {return stopping_threshold_;}
     void set_stopping_threshold(const float stopping_threshold) {stopping_threshold_ = stopping_threshold;}

@@ -678,7 +678,8 @@ bin/main.cpp.o: src/main.cpp include/main.h include/api.h \
  include/lemlib/logger/message.hpp include/lemlib/logger/infoSink.hpp \
  include/lemlib/logger/telemetrySink.hpp include/claw.hpp \
  include/dr4b.hpp include/orchestrator.hpp include/anti_tip.hpp \
- include/intake.hpp include/auto_selector.hpp include/tasks.hpp
+ include/intake.hpp include/ez_chassis.hpp include/auto_selector.hpp \
+ include/tasks.hpp
 include/main.h:
 include/api.h:
 include/pros/adi.h:
@@ -1447,5 +1448,6 @@ include/dr4b.hpp:
 include/orchestrator.hpp:
 include/anti_tip.hpp:
 include/intake.hpp:
+include/ez_chassis.hpp:
 include/auto_selector.hpp:
 include/tasks.hpp:

@@ -13,41 +13,41 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/core/../draw/../misc/lv_types.h \
  include/liblvgl/core/../draw/../misc/lv_style.h \
  include/liblvgl/core/../draw/../misc/../font/lv_font.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../font/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/lv_types.h \
  include/liblvgl/core/../draw/../misc/../font/lv_symbol_def.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_buf.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_math.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_assert.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_log.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/stdlib/lv_mem.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/stdlib/lv_string.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_palette.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color_op.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/stdlib/lv_string.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_image_dsc.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache_entry.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/osal/lv_os.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/osal/lv_os_none.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache_private.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache_lru_rb.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_image_cache.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_image_header_cache.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/lv_draw_buf.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_area.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_math.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_color.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_assert.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_log.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_mem.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_string.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/../misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_palette.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_color.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_color_op.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../stdlib/lv_string.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/lv_image_dsc.h \
+ include/liblvgl/core/../draw/../misc/../font/../draw/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/lv_area.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache_entry.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/lv_os.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/../misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/lv_os_none.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/../lv_types.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache_private.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache_lru_rb.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_image_cache.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_image_header_cache.h \
  include/liblvgl/core/../draw/../misc/lv_color.h \
  include/liblvgl/core/../draw/../misc/lv_area.h \
  include/liblvgl/core/../draw/../misc/lv_anim.h \
@@ -56,23 +56,23 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/core/../draw/../misc/lv_math.h \
  include/liblvgl/core/../draw/../misc/lv_timer.h \
  include/liblvgl/core/../draw/../misc/../tick/lv_tick.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../tick/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../tick/../misc/lv_types.h \
  include/liblvgl/core/../draw/../misc/lv_ll.h \
  include/liblvgl/core/../draw/../misc/lv_text.h \
  include/liblvgl/core/../draw/../misc/../stdlib/lv_sprintf.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../stdlib/../misc/lv_types.h \
  include/liblvgl/core/../draw/../misc/lv_assert.h \
  include/liblvgl/core/../draw/../misc/lv_bidi.h \
  include/liblvgl/core/../draw/../misc/../layouts/lv_layout.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
+ include/liblvgl/core/../draw/../misc/../layouts/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../layouts/../misc/lv_types.h \
  include/liblvgl/core/../draw/../misc/../layouts/flex/lv_flex.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
+ include/liblvgl/core/../draw/../misc/../layouts/flex/../../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../layouts/flex/../../misc/lv_area.h \
  include/liblvgl/core/../draw/../misc/../layouts/grid/lv_grid.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
+ include/liblvgl/core/../draw/../misc/../layouts/grid/../../lv_conf_internal.h \
+ include/liblvgl/core/../draw/../misc/../layouts/grid/../../misc/lv_area.h \
  include/liblvgl/core/../draw/../misc/lv_style_gen.h \
  include/liblvgl/core/../draw/../misc/lv_text.h \
  include/liblvgl/core/../draw/../misc/lv_profiler.h \
@@ -88,12 +88,14 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/core/../draw/sw/../../misc/lv_area.h \
  include/liblvgl/core/../draw/sw/../../misc/lv_color.h \
  include/liblvgl/core/../draw/sw/../../display/lv_display.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_timer.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_event.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_array.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw.h \
+ include/liblvgl/core/../draw/sw/../../display/../misc/lv_types.h \
+ include/liblvgl/core/../draw/sw/../../display/../misc/lv_timer.h \
+ include/liblvgl/core/../draw/sw/../../display/../misc/lv_event.h \
+ include/liblvgl/core/../draw/sw/../../display/../misc/lv_types.h \
+ include/liblvgl/core/../draw/sw/../../display/../misc/../lv_conf_internal.h \
+ include/liblvgl/core/../draw/sw/../../display/../misc/lv_array.h \
+ include/liblvgl/core/../draw/sw/../../display/../misc/lv_color.h \
+ include/liblvgl/core/../draw/sw/../../display/../draw/lv_draw.h \
  include/liblvgl/core/../draw/sw/../../osal/lv_os.h \
  include/liblvgl/core/../draw/sw/../lv_draw_vector.h \
  include/liblvgl/core/../draw/sw/../../misc/lv_array.h \
@@ -119,13 +121,13 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/core/../draw/sw/../lv_draw_arc.h \
  include/liblvgl/core/../draw/sw/blend/lv_draw_sw_blend.h \
  include/liblvgl/core/../draw/sw/blend/../lv_draw_sw_mask.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_math.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_style.h \
+ include/liblvgl/core/../draw/sw/blend/../../../misc/lv_area.h \
+ include/liblvgl/core/../draw/sw/blend/../../../misc/lv_color.h \
+ include/liblvgl/core/../draw/sw/blend/../../../misc/lv_math.h \
+ include/liblvgl/core/../draw/sw/blend/../../../misc/lv_types.h \
+ include/liblvgl/core/../draw/sw/blend/../../../misc/lv_color.h \
+ include/liblvgl/core/../draw/sw/blend/../../../misc/lv_area.h \
+ include/liblvgl/core/../draw/sw/blend/../../../misc/lv_style.h \
  include/liblvgl/core/../misc/lv_anim.h \
  include/liblvgl/core/../misc/lv_area.h \
  include/liblvgl/core/../misc/lv_color_op.h \
@@ -137,39 +139,41 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/core/../others/sysmon/lv_sysmon.h \
  include/liblvgl/core/../others/sysmon/../../misc/lv_timer.h \
  include/liblvgl/core/../others/sysmon/../../others/observer/lv_observer.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_style.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_assert.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_tree.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_anim.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/display/lv_display.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_pos.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_scroll.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_style.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_bidi.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_style_gen.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_style.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_draw.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_rect.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_label.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_image.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_line.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_arc.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_class.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_property.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_event.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_event.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/indev/lv_indev.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_group.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_ll.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_timer.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_event.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_group.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../lv_conf_internal.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_types.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_style.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_area.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_color.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_assert.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_tree.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_anim.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../display/lv_display.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_pos.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_scroll.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_style.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_bidi.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_style_gen.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../core/lv_obj_style.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_draw.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_rect.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_label.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_image.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_line.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_arc.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_class.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_property.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_event.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_event.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/lv_indev.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/lv_group.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/../lv_conf_internal.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/../misc/lv_types.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/../misc/lv_ll.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../misc/lv_area.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../misc/lv_timer.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../misc/lv_event.h \
+ include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_group.h \
  include/liblvgl/core/../stdlib/builtin/lv_tlsf.h \
  include/liblvgl/core/../stdlib/builtin/../../lv_conf_internal.h \
  include/liblvgl/core/../stdlib/builtin/../../osal/lv_os.h \
@@ -240,16 +244,16 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/libs/qrcode/lv_qrcode_private.h \
  include/liblvgl/libs/qrcode/../../widgets/canvas/lv_canvas_private.h \
  include/liblvgl/libs/qrcode/../../widgets/canvas/../image/lv_image_private.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_private.h \
+ include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../core/lv_obj_private.h \
  include/liblvgl/libs/qrcode/../../widgets/canvas/../image/lv_image.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_fs.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw.h \
+ include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../lv_conf_internal.h \
+ include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../core/lv_obj.h \
+ include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../misc/lv_fs.h \
+ include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../draw/lv_draw.h \
  include/liblvgl/libs/qrcode/../../widgets/canvas/lv_canvas.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
+ include/liblvgl/libs/qrcode/../../widgets/canvas/../../lv_conf_internal.h \
  include/liblvgl/libs/qrcode/../../widgets/canvas/../image/lv_image.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_image.h \
+ include/liblvgl/libs/qrcode/../../widgets/canvas/../../draw/lv_draw_image.h \
  include/liblvgl/libs/qrcode/lv_qrcode.h \
  include/liblvgl/libs/qrcode/../../lv_conf_internal.h \
  include/liblvgl/libs/qrcode/../../misc/lv_color.h \
@@ -360,13 +364,13 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/widgets/slider/../bar/../../core/lv_obj.h \
  include/liblvgl/widgets/slider/../bar/../../misc/lv_anim.h \
  include/liblvgl/widgets/slider/../bar/../label/lv_label.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/font/lv_font.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/font/lv_symbol_def.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_text.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw.h \
+ include/liblvgl/widgets/slider/../bar/../label/../../lv_conf_internal.h \
+ include/liblvgl/widgets/slider/../bar/../label/../../misc/lv_types.h \
+ include/liblvgl/widgets/slider/../bar/../label/../../core/lv_obj.h \
+ include/liblvgl/widgets/slider/../bar/../label/../../font/lv_font.h \
+ include/liblvgl/widgets/slider/../bar/../label/../../font/lv_symbol_def.h \
+ include/liblvgl/widgets/slider/../bar/../label/../../misc/lv_text.h \
+ include/liblvgl/widgets/slider/../bar/../label/../../draw/lv_draw.h \
  include/liblvgl/widgets/slider/lv_slider.h \
  include/liblvgl/widgets/slider/../bar/lv_bar.h \
  include/liblvgl/widgets/switch/lv_switch_private.h \
@@ -601,7 +605,7 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/drivers/display/fb/lv_linux_fbdev.h \
  include/liblvgl/drivers/display/fb/../../../display/lv_display.h \
  include/liblvgl/drivers/display/tft_espi/lv_tft_espi.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/display/lv_display.h \
+ include/liblvgl/drivers/display/tft_espi/../../../display/lv_display.h \
  include/liblvgl/drivers/display/lcd/lv_lcd_generic_mipi.h \
  include/liblvgl/drivers/display/lcd/../../../display/lv_display.h \
  include/liblvgl/drivers/display/ili9341/lv_ili9341.h \
@@ -613,9 +617,9 @@ bin/auto_selector.cpp.o: src/auto_selector.cpp include/auto_selector.hpp \
  include/liblvgl/drivers/display/st7796/lv_st7796.h \
  include/liblvgl/drivers/display/st7796/../lcd/lv_lcd_generic_mipi.h \
  include/liblvgl/drivers/display/renesas_glcdc/lv_renesas_glcdc.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/display/lv_display.h \
+ include/liblvgl/drivers/display/renesas_glcdc/../../../display/lv_display.h \
  include/liblvgl/drivers/display/st_ltdc/lv_st_ltdc.h \
- C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h \
+ include/liblvgl/drivers/display/st_ltdc/../../../lv_conf_internal.h \
  include/liblvgl/drivers/nuttx/lv_nuttx_entry.h \
  include/liblvgl/drivers/nuttx/../../lv_conf_internal.h \
  include/liblvgl/drivers/nuttx/../../display/lv_display.h \
@@ -661,41 +665,41 @@ include/liblvgl/core/../draw/../lv_conf_internal.h:
 include/liblvgl/core/../draw/../misc/lv_types.h:
 include/liblvgl/core/../draw/../misc/lv_style.h:
 include/liblvgl/core/../draw/../misc/../font/lv_font.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../font/../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/lv_types.h:
 include/liblvgl/core/../draw/../misc/../font/lv_symbol_def.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_buf.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_math.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_assert.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_log.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/stdlib/lv_mem.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/stdlib/lv_string.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_palette.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color_op.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/stdlib/lv_string.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_image_dsc.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache_entry.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/osal/lv_os.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/osal/lv_os_none.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache_private.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_cache_lru_rb.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_image_cache.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/cache/lv_image_header_cache.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/lv_draw_buf.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_area.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_math.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_color.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_assert.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_log.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_mem.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/lv_string.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/../stdlib/../misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_palette.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_color.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../misc/lv_color_op.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../stdlib/lv_string.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/lv_image_dsc.h:
+include/liblvgl/core/../draw/../misc/../font/../draw/../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/lv_area.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache_entry.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/lv_os.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/../misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../osal/lv_os_none.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/../lv_types.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache_private.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_cache_lru_rb.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_image_cache.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/../../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../font/../misc/cache/lv_image_header_cache.h:
 include/liblvgl/core/../draw/../misc/lv_color.h:
 include/liblvgl/core/../draw/../misc/lv_area.h:
 include/liblvgl/core/../draw/../misc/lv_anim.h:
@@ -704,23 +708,23 @@ include/liblvgl/core/../draw/../misc/lv_types.h:
 include/liblvgl/core/../draw/../misc/lv_math.h:
 include/liblvgl/core/../draw/../misc/lv_timer.h:
 include/liblvgl/core/../draw/../misc/../tick/lv_tick.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../tick/../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../tick/../misc/lv_types.h:
 include/liblvgl/core/../draw/../misc/lv_ll.h:
 include/liblvgl/core/../draw/../misc/lv_text.h:
 include/liblvgl/core/../draw/../misc/../stdlib/lv_sprintf.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../stdlib/../misc/lv_types.h:
 include/liblvgl/core/../draw/../misc/lv_assert.h:
 include/liblvgl/core/../draw/../misc/lv_bidi.h:
 include/liblvgl/core/../draw/../misc/../layouts/lv_layout.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
+include/liblvgl/core/../draw/../misc/../layouts/../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../layouts/../misc/lv_types.h:
 include/liblvgl/core/../draw/../misc/../layouts/flex/lv_flex.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
+include/liblvgl/core/../draw/../misc/../layouts/flex/../../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../layouts/flex/../../misc/lv_area.h:
 include/liblvgl/core/../draw/../misc/../layouts/grid/lv_grid.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
+include/liblvgl/core/../draw/../misc/../layouts/grid/../../lv_conf_internal.h:
+include/liblvgl/core/../draw/../misc/../layouts/grid/../../misc/lv_area.h:
 include/liblvgl/core/../draw/../misc/lv_style_gen.h:
 include/liblvgl/core/../draw/../misc/lv_text.h:
 include/liblvgl/core/../draw/../misc/lv_profiler.h:
@@ -736,12 +740,14 @@ include/liblvgl/core/../draw/sw/../lv_draw.h:
 include/liblvgl/core/../draw/sw/../../misc/lv_area.h:
 include/liblvgl/core/../draw/sw/../../misc/lv_color.h:
 include/liblvgl/core/../draw/sw/../../display/lv_display.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_timer.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_event.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_array.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw.h:
+include/liblvgl/core/../draw/sw/../../display/../misc/lv_types.h:
+include/liblvgl/core/../draw/sw/../../display/../misc/lv_timer.h:
+include/liblvgl/core/../draw/sw/../../display/../misc/lv_event.h:
+include/liblvgl/core/../draw/sw/../../display/../misc/lv_types.h:
+include/liblvgl/core/../draw/sw/../../display/../misc/../lv_conf_internal.h:
+include/liblvgl/core/../draw/sw/../../display/../misc/lv_array.h:
+include/liblvgl/core/../draw/sw/../../display/../misc/lv_color.h:
+include/liblvgl/core/../draw/sw/../../display/../draw/lv_draw.h:
 include/liblvgl/core/../draw/sw/../../osal/lv_os.h:
 include/liblvgl/core/../draw/sw/../lv_draw_vector.h:
 include/liblvgl/core/../draw/sw/../../misc/lv_array.h:
@@ -767,13 +773,13 @@ include/liblvgl/core/../draw/sw/../../lv_conf_internal.h:
 include/liblvgl/core/../draw/sw/../lv_draw_arc.h:
 include/liblvgl/core/../draw/sw/blend/lv_draw_sw_blend.h:
 include/liblvgl/core/../draw/sw/blend/../lv_draw_sw_mask.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_math.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_style.h:
+include/liblvgl/core/../draw/sw/blend/../../../misc/lv_area.h:
+include/liblvgl/core/../draw/sw/blend/../../../misc/lv_color.h:
+include/liblvgl/core/../draw/sw/blend/../../../misc/lv_math.h:
+include/liblvgl/core/../draw/sw/blend/../../../misc/lv_types.h:
+include/liblvgl/core/../draw/sw/blend/../../../misc/lv_color.h:
+include/liblvgl/core/../draw/sw/blend/../../../misc/lv_area.h:
+include/liblvgl/core/../draw/sw/blend/../../../misc/lv_style.h:
 include/liblvgl/core/../misc/lv_anim.h:
 include/liblvgl/core/../misc/lv_area.h:
 include/liblvgl/core/../misc/lv_color_op.h:
@@ -785,39 +791,41 @@ include/liblvgl/core/../osal/lv_os.h:
 include/liblvgl/core/../others/sysmon/lv_sysmon.h:
 include/liblvgl/core/../others/sysmon/../../misc/lv_timer.h:
 include/liblvgl/core/../others/sysmon/../../others/observer/lv_observer.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_style.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_color.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_assert.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_tree.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_anim.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/display/lv_display.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_pos.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_scroll.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_style.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_bidi.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_style_gen.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_style.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_draw.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_rect.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_label.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_image.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_line.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_arc.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_class.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_property.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_event.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_event.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/indev/lv_indev.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_group.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_ll.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_area.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_timer.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_event.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_group.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../lv_conf_internal.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_types.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_style.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_area.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_color.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_assert.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_tree.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_anim.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../display/lv_display.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_pos.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_scroll.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_style.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_bidi.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_style_gen.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../core/lv_obj_style.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_draw.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_rect.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_label.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_image.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_line.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../draw/lv_draw_arc.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_class.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_property.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_obj_event.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../misc/lv_event.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/lv_indev.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/lv_group.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/../lv_conf_internal.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/../misc/lv_types.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../core/../misc/lv_ll.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../misc/lv_area.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../misc/lv_timer.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/../indev/../misc/lv_event.h:
+include/liblvgl/core/../others/sysmon/../../others/observer/../../core/lv_group.h:
 include/liblvgl/core/../stdlib/builtin/lv_tlsf.h:
 include/liblvgl/core/../stdlib/builtin/../../lv_conf_internal.h:
 include/liblvgl/core/../stdlib/builtin/../../osal/lv_os.h:
@@ -891,16 +899,16 @@ include/liblvgl/others/observer/lv_observer.h:
 include/liblvgl/libs/qrcode/lv_qrcode_private.h:
 include/liblvgl/libs/qrcode/../../widgets/canvas/lv_canvas_private.h:
 include/liblvgl/libs/qrcode/../../widgets/canvas/../image/lv_image_private.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj_private.h:
+include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../core/lv_obj_private.h:
 include/liblvgl/libs/qrcode/../../widgets/canvas/../image/lv_image.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_fs.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw.h:
+include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../lv_conf_internal.h:
+include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../core/lv_obj.h:
+include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../misc/lv_fs.h:
+include/liblvgl/libs/qrcode/../../widgets/canvas/../image/../../draw/lv_draw.h:
 include/liblvgl/libs/qrcode/../../widgets/canvas/lv_canvas.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
+include/liblvgl/libs/qrcode/../../widgets/canvas/../../lv_conf_internal.h:
 include/liblvgl/libs/qrcode/../../widgets/canvas/../image/lv_image.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw_image.h:
+include/liblvgl/libs/qrcode/../../widgets/canvas/../../draw/lv_draw_image.h:
 include/liblvgl/libs/qrcode/lv_qrcode.h:
 include/liblvgl/libs/qrcode/../../lv_conf_internal.h:
 include/liblvgl/libs/qrcode/../../misc/lv_color.h:
@@ -1021,13 +1029,13 @@ include/liblvgl/widgets/slider/../bar/../../lv_conf_internal.h:
 include/liblvgl/widgets/slider/../bar/../../core/lv_obj.h:
 include/liblvgl/widgets/slider/../bar/../../misc/lv_anim.h:
 include/liblvgl/widgets/slider/../bar/../label/lv_label.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_types.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/core/lv_obj.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/font/lv_font.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/font/lv_symbol_def.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/misc/lv_text.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/draw/lv_draw.h:
+include/liblvgl/widgets/slider/../bar/../label/../../lv_conf_internal.h:
+include/liblvgl/widgets/slider/../bar/../label/../../misc/lv_types.h:
+include/liblvgl/widgets/slider/../bar/../label/../../core/lv_obj.h:
+include/liblvgl/widgets/slider/../bar/../label/../../font/lv_font.h:
+include/liblvgl/widgets/slider/../bar/../label/../../font/lv_symbol_def.h:
+include/liblvgl/widgets/slider/../bar/../label/../../misc/lv_text.h:
+include/liblvgl/widgets/slider/../bar/../label/../../draw/lv_draw.h:
 include/liblvgl/widgets/slider/lv_slider.h:
 include/liblvgl/widgets/slider/../bar/lv_bar.h:
 include/liblvgl/widgets/switch/lv_switch_private.h:
@@ -1277,7 +1285,7 @@ include/liblvgl/drivers/display/drm/../../../display/lv_display.h:
 include/liblvgl/drivers/display/fb/lv_linux_fbdev.h:
 include/liblvgl/drivers/display/fb/../../../display/lv_display.h:
 include/liblvgl/drivers/display/tft_espi/lv_tft_espi.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/display/lv_display.h:
+include/liblvgl/drivers/display/tft_espi/../../../display/lv_display.h:
 include/liblvgl/drivers/display/lcd/lv_lcd_generic_mipi.h:
 include/liblvgl/drivers/display/lcd/../../../display/lv_display.h:
 include/liblvgl/drivers/display/ili9341/lv_ili9341.h:
@@ -1289,9 +1297,9 @@ include/liblvgl/drivers/display/st7789/../lcd/lv_lcd_generic_mipi.h:
 include/liblvgl/drivers/display/st7796/lv_st7796.h:
 include/liblvgl/drivers/display/st7796/../lcd/lv_lcd_generic_mipi.h:
 include/liblvgl/drivers/display/renesas_glcdc/lv_renesas_glcdc.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/display/lv_display.h:
+include/liblvgl/drivers/display/renesas_glcdc/../../../display/lv_display.h:
 include/liblvgl/drivers/display/st_ltdc/lv_st_ltdc.h:
-C:/Users/wchen28/Documents/10G/include/liblvgl/lv_conf_internal.h:
+include/liblvgl/drivers/display/st_ltdc/../../../lv_conf_internal.h:
 include/liblvgl/drivers/nuttx/lv_nuttx_entry.h:
 include/liblvgl/drivers/nuttx/../../lv_conf_internal.h:
 include/liblvgl/drivers/nuttx/../../display/lv_display.h:

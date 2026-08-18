@@ -678,7 +678,7 @@ bin/grape.cpp.o: src/grape.cpp include/grape.hpp include/claw.hpp \
  include/lemlib/logger/baseSink.hpp include/fmt/args.h \
  include/lemlib/logger/message.hpp include/lemlib/logger/infoSink.hpp \
  include/lemlib/logger/telemetrySink.hpp include/orchestrator.hpp \
- include/anti_tip.hpp include/tasks.hpp
+ include/anti_tip.hpp include/ez_chassis.hpp include/tasks.hpp
 include/grape.hpp:
 include/claw.hpp:
 include/api.h:
@@ -1446,4 +1446,5 @@ include/lemlib/logger/infoSink.hpp:
 include/lemlib/logger/telemetrySink.hpp:
 include/orchestrator.hpp:
 include/anti_tip.hpp:
+include/ez_chassis.hpp:
 include/tasks.hpp:

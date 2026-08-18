@@ -678,7 +678,7 @@ bin/tasks.cpp.o: src/tasks.cpp include/ports.hpp include/api.h \
  include/lemlib/logger/infoSink.hpp \
  include/lemlib/logger/telemetrySink.hpp include/claw.hpp \
  include/dr4b.hpp include/orchestrator.hpp include/anti_tip.hpp \
- include/intake.hpp
+ include/intake.hpp include/ez_chassis.hpp
 include/ports.hpp:
 include/api.h:
 include/pros/adi.h:
@@ -1445,3 +1445,4 @@ include/dr4b.hpp:
 include/orchestrator.hpp:
 include/anti_tip.hpp:
 include/intake.hpp:
+include/ez_chassis.hpp:

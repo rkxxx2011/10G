@@ -678,7 +678,7 @@ bin/opcontrol.cpp.o: src/opcontrol.cpp include/claw.hpp include/api.h \
  include/lemlib/logger/baseSink.hpp include/fmt/args.h \
  include/lemlib/logger/message.hpp include/lemlib/logger/infoSink.hpp \
  include/lemlib/logger/telemetrySink.hpp include/orchestrator.hpp \
- include/anti_tip.hpp include/tasks.hpp
+ include/anti_tip.hpp include/ez_chassis.hpp include/tasks.hpp
 include/claw.hpp:
 include/api.h:
 include/pros/adi.h:
@@ -1446,4 +1446,5 @@ include/lemlib/logger/infoSink.hpp:
 include/lemlib/logger/telemetrySink.hpp:
 include/orchestrator.hpp:
 include/anti_tip.hpp:
+include/ez_chassis.hpp:
 include/tasks.hpp:

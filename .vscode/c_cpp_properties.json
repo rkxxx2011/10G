@@ -9,14 +9,15 @@
         "c:\\Users\\wchen28\\Downloads\\10G-main-selector-v2\\10G-main\\include",
         "/Users/milan/Downloads/10G-main v2 2/include",
         "/Users/rk/Downloads/10G-main v2 2/include",
-        "c:\\Users\\wchen28\\Documents\\10G\\include"
+        "c:\\Users\\wchen28\\Documents\\10G\\include",
+        "/Users/rk/development/git/10G/include"
       ],
       "defines": [
         "_DEBUG",
         "UNICODE",
         "_UNICODE"
       ],
-      "compilerPath": "c:\\Users\\wchen28\\AppData\\Roaming\\Code\\User\\globalStorage\\sigbots.pros\\install\\pros-toolchain-windows\\usr\\bin\\arm-none-eabi-g++",
+      "compilerPath": "/Users/rk/Library/Application Support/Code/User/globalStorage/sigbots.pros/install/pros-toolchain-macos/bin/arm-none-eabi-g++",
       "cStandard": "gnu11",
       "cppStandard": "gnu++20",
       "intelliSenseMode": "gcc-arm",
@@ -25,7 +26,7 @@
       ],
       "browse": {
         "path": [
-          "c:\\Users\\wchen28\\Documents\\10G"
+          "/Users/rk/development/git/10G"
         ],
         "limitSymbolsToIncludedHeaders": true,
         "databaseFilename": ""
